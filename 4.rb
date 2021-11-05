@@ -20,6 +20,7 @@ str = IO.read("data/4.txt")
 
 result = 0
 a = 0
+index = 0
 
 while true
     counter = 0
@@ -45,12 +46,13 @@ while true
     for i in 0..2 do
         if(dimensions[i]<min)
             min = dimensions[i]
+            index = i
         end
     end
     lowest[0] = min
     min = 9999
     for i in 0..2 do
-        if(dimensions[i]<min && dimensions[i]!=lowest[0])
+        if(dimensions[i]<min && i!=index)
             min = dimensions[i]
         end
     end
