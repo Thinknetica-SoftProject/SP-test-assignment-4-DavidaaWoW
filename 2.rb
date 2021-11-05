@@ -16,3 +16,16 @@
 #
 ## Решение:
 
+require 'digest'
+
+input = gets.chomp
+hash = ""
+num = 0
+
+while (hash[0]!="0"||hash[1]!="0"||hash[2]!="0"||hash[3]!="0"||hash[4]!="0")
+    hash = Digest::MD5.hexdigest (input + num.to_s)
+    num+=1
+end
+
+puts num-1
+

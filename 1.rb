@@ -16,6 +16,18 @@
 #
 ## Решение:
 
+str = IO.read("data/1.txt")
+john = 0
+for a in 0..str.length
+    if (str[a] == '(')
+        john+=1
+    elsif (str[a] == ')')
+        john-=1
+    else
+        break
+    end
+end
+puts john
 
 
 
